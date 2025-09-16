@@ -2,13 +2,15 @@
 
 void update(int *a,int *b) 
 {
-    //int sum  = *a + *b;
-    //int dif  = *b - *a ;
     int tmp = *a ;
     int sum= tmp + *b ;
-    int dif=  *b - tmp;
-    *a = sum  ;
-    *b = dif ;
+    int dif=  *b - tmp ;
+    *a = sum ;
+    if (dif < 0)
+    { 
+    dif = dif * -1;
+    } 
+    *b = dif  ;
 }
 
 int main() 
